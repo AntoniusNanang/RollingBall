@@ -7,8 +7,8 @@ public class FlipCtr : MonoBehaviour
     public Vector3 touchStartPos;
     public Vector3 touchEndPos;
     public string Direction;
+    public CameraCtr cameraCtr;
     bool oneplay;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -74,15 +74,19 @@ public class FlipCtr : MonoBehaviour
         switch (Direction)
         {
             case "up":
+                if (cameraCtr.ButtonFlag[0]) cameraCtr.CameraMove_Flag[3] = true;
                 Debug.Log(Direction);
                 break;
             case "down":
+                if (cameraCtr.ButtonFlag[0]) cameraCtr.CameraMove_Flag[2] = true;
                 Debug.Log(Direction);
                 break;
             case "right":
+                if (cameraCtr.ButtonFlag[0]) cameraCtr.CameraMove_Flag[1] = true;
                 Debug.Log(Direction);
                 break;
             case "left":
+                if (cameraCtr.ButtonFlag[0]) cameraCtr.CameraMove_Flag[0] = true;
                 Debug.Log(Direction);
                 break;
             case "touch":
