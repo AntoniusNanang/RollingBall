@@ -9,6 +9,7 @@ public class GetItem : MonoBehaviour
     int count;          // アイテムを何個集めたか
     int MaxCount;       // 最大アイテム
     Vector3[] v2 = new Vector3[2];
+    public GameObject Clear;
     
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,12 @@ public class GetItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ItemTake();
+        if(count >= MaxCount)
+        {
+            Debug.Log("クリア");
+            Clear.SetActive(true);
+            count = 0;
+        }
     }
 
     private void ItemTake()
@@ -48,5 +54,13 @@ public class GetItem : MonoBehaviour
             Debug.Log(count);
         }
     }
-
+    private void OnTriggerEnter(Collider other)
+    {
+        string layerName = LayerMask.LayerToName(other.gameObject.layer);
+        if(layerName == "Item")
+        {
+            Destroy(other.gameObject);
+            count++;
+        }
+    }
 }

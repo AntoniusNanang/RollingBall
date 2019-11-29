@@ -12,8 +12,8 @@ public class CameraCtr : MonoBehaviour
     public float speed = 10.0f;
     private float timecnt;
     private float NowVec = 0.0f;
-    private bool[] CameraMove_Flag;
-    private bool[] ButtonFlag;
+    public bool[] CameraMove_Flag;
+    public bool[] ButtonFlag;
     private bool cameraPart2 = false;
     private int n = 0;
 
@@ -139,13 +139,13 @@ public class CameraCtr : MonoBehaviour
                     ButtonFlag[0] = true;
                     x = f;
                     r += 2;
-                    if (r > 3) r = 0;
+                    if (r > 3) r = r-4;
                     d += 2;
-                    if (d > 3) d = 0;
+                    if (d > 3) d = d-4;
                     l += 2;
-                    if (l > 3) l = 0;
+                    if (l > 3) l = l-4;
                     f += 2;
-                    if (f > 3) f = 0;
+                    if (f > 3) f = f-4;
                     cameraPart2 = false;
                 }
             }
