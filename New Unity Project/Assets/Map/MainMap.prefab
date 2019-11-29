@@ -1170,7 +1170,7 @@ MonoBehaviour:
   dontDestroyMeshOnDelete: 0
   m_selectedFaces: 
   m_SelectedEdges: []
-  m_selectedTriangles: 10000000
+  m_selectedTriangles: 
 --- !u!114 &1522806759826839551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1999,7 +1999,7 @@ MonoBehaviour:
   dontDestroyMeshOnDelete: 0
   m_selectedFaces: 
   m_SelectedEdges: []
-  m_selectedTriangles: 09000000
+  m_selectedTriangles: 
 --- !u!64 &7643114815893981755
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3147,7 +3147,7 @@ MonoBehaviour:
   dontDestroyMeshOnDelete: 0
   m_selectedFaces: 
   m_SelectedEdges: []
-  m_selectedTriangles: 03000000
+  m_selectedTriangles: 
 --- !u!64 &7643114816445888407
 MeshCollider:
   m_ObjectHideFlags: 0
