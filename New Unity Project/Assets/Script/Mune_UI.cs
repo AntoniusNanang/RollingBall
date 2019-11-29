@@ -20,11 +20,15 @@ public class Mune_UI : MonoBehaviour
     private bool windowtrigger = false;
     private RectTransform window;
 
+    private AudioSource soundMenu;
 
     // Start is called before the first frame update
     void Start()
     {
         window = Window.GetComponent<RectTransform>();
+
+        soundMenu = GetComponent<AudioSource>();
+
     }
 
     void FixedUpdate()
