@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Mune_UI : MonoBehaviour
 {
@@ -64,7 +65,7 @@ public class Mune_UI : MonoBehaviour
 
     public void OnClickTitleButton()
     {
-        Debug.Log("タイトル");
+        SceneManager.LoadScene("Title");
     }
     public void OnClickStegeselectButton()
     {
