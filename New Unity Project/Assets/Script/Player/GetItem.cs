@@ -10,13 +10,21 @@ public class GetItem : MonoBehaviour
     int MaxCount;       // 最大アイテム
     Vector3[] v2 = new Vector3[2];
     public GameObject Clear;
-    
+    public GameObject tap;
+    public AudioSource clear_SE;
+    public GameObject Gamebgm;
+    public GameObject tap_Title;
+    public bool Is_Move = true;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        Is_Move = true;
         count = 0;
         MaxCount = 2;
-       
+        clear_SE = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -24,9 +32,14 @@ public class GetItem : MonoBehaviour
     {
         if(count >= MaxCount)
         {
+            gameObject.SetActive(false);
             Debug.Log("クリア");
             Clear.SetActive(true);
             count = 0;
+            tap.gameObject.SetActive(true);
+            Gamebgm.SetActive(false);
+            tap_Title.SetActive(true);
+            clear_SE.PlayOneShot(clear_SE.clip);
         }
     }
 
