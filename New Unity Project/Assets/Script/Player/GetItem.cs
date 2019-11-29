@@ -15,7 +15,7 @@ public class GetItem : MonoBehaviour
     {
         count = 0;
         MaxCount = 2;
-        v2[0] = ItemObj[0].transform.position; v2[1] = ItemObj[1].transform.position;
+       
     }
 
     // Update is called once per frame
@@ -28,6 +28,7 @@ public class GetItem : MonoBehaviour
     {
         Vector3 v1 = transform.position;
         Vector3[] dir =new Vector3[2];
+        v2[0] = ItemObj[0].transform.position; v2[1] = ItemObj[1].transform.position;
         dir[0] = v1 - v2[0]; dir[1] = v1 - v2[1];
         float[] d = new float[2];
         d[0] = dir[0].magnitude; d[1] = dir[1].magnitude;
